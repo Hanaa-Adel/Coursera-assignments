@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="assignment1.js"></script>
+    <title>LunchCheck</title>
+  </head>
+  <body ng-app="LunchCheck">
+    <h1>Lunch Checker</h1>
+    <div ng-controller="LunchCheckController">
+
+      <div >
+        Your lunch menu:
+
+        <!-- I do Not consider empty (ie , ,  or ,,) as an item towards to the count-->
+        <input
+        type="text"
+        ng-model="lunchMenu"
+        placeholder={{placeholder}}
+        > <em>Empty items (ie ', ,'or',,') are Not considered as an item towards to the count</em>
+      </div>
+      <div >
+        <button ng-click="mealsCount()">Check If Too Much</button>
+        <br>
+      </div>
+      <div >
+           <!-- Your message can go here. -->
+        {{displayedMessage}}
+      </div>
+    </div>
+  </body>
+</html>
